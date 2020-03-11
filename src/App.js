@@ -26,22 +26,19 @@ class App extends React.Component {
     }
 
     apiCall = (event) => {
+
         event.preventDefault();
-        const apikey = '5512d18505fd81c34dd3a281d9215947';
+        const API_KEY ='5512d18505fd81c34dd3a281d9215947';
         let city = event.target.elements.cityName.value;
         let zip = event.target.elements.zipCode.value;
-
-        let link = this.getlink(city, zip) + apikey
-
+        let link = this.getlink(city, zip) + API_KEY;
         fetch(link)
             .then(response => {
                 return response.json();
             })
             .then(data => {
                 console.log("data: ", data);
-                this.setState({
-                    weatherdata: data
-                })
+                this.setState({weatherdata: data})
             })
             .catch(err => console.error("fetch error: ", err));
     }
@@ -51,8 +48,10 @@ class App extends React.Component {
         return (
             <div className="App">
                 <Welcome/>
+                <div className='overflows'>
                 <Form fetch={this.apiCall}/>
                 <Weather weatherdata={this.state.weatherdata}/>
+                </div>
             </div>
         )
     }

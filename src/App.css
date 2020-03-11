@@ -1,21 +1,50 @@
 body {
-    background-color: black;
+    background-image: url('./assets/stars.jpg');
+    height: 98vh;
+    width: auto;
 }
 .App {
     text-align: center;
 }
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+@media(max-width:800){
+
+}
 h1 {
+    color: white;
+}
+h2{
     color: white;
 }
 p {
     color: white;
 }
-h3{
+h3 {
     color: white;
 }
-img{
-    background-color: white;
-    height: 30px;
-    width: 30px;
+img {
+    /* background-color: white; */
+    height: 100px;
+    width: 100px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
 }
 
+.overflows{
+    overflow: hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 75vh;
+}
+#maximum{
+    padding-bottom:40px ;
+}
