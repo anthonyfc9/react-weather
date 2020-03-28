@@ -9,13 +9,13 @@ export default function Weather(props) {
             .icon + '@2x.png';
         return (
             <div>
-                <h1 id='location'>weather at: {props.weatherdata.name}</h1>
-                <h1 id='description'>{props.weatherdata.weather[0].description}</h1>
+                <h1 className='location'>Weather at: {props.weatherdata.name}</h1>
+                <h1 className='description'>{props.weatherdata.weather[0].description}</h1>
                 <img src={icon} alt='icon'/>
-                <h1 id='temp-feels'>The temperature is {props.weatherdata.main.temp}&#8457;</h1>
-                <h1 id='temp-feels'>the temperature Feels like {props.weatherdata.main.feels_like}&#8457;</h1>
-                <h1 id='min-max'>Todays minimum: {props.weatherdata.main.temp_min}&#8457;</h1>
-                <h1 id='min-max'>Todays maximumn: {props.weatherdata.main.temp_min}&#8457;</h1>
+                <h1 className='temp-feels'>The temperature is {props.weatherdata.main.temp}&#8457;</h1>
+                <h1 className='temp-feels'>Feels like: {props.weatherdata.main.feels_like}&#8457;</h1>
+                <h1 className='min-max'>Todays minimum: {props.weatherdata.main.temp_min}&#8457;</h1>
+                <h1 className='min-max maximum'>Todays maximumn: {props.weatherdata.main.temp_min}&#8457;</h1>
 
             </div>
         )

@@ -7,7 +7,7 @@ export default class Welcome extends React.Component {
             
             
             <div>
-                <h1>Welcome to Raindrops</h1>
+                <h1 className='welcome'>Welcome to Raindrops</h1>
                 <h1 className='exactDate'>
                     Today is {date.toDateString()}</h1>
             </div>
